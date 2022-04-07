@@ -2,7 +2,8 @@
     "env": {
         "node": true,
         "commonjs": true,
-        "es2021": true
+        "es2021": true,
+				"jest": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
@@ -21,7 +22,7 @@
         "no-trailing-spaces": [
             "error", { "skipBlankLines": false }
         ],
-        "eqeqeq": 2,
+        "eqeqeq": "error",
         "no-console": "off"
     }
 }

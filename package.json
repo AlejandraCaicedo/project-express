@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "format": "prettier --config .prettierrc.json ./src/**/*.js --write",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:all": "npm run lint:fix && npm run format",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +23,7 @@
   "devDependencies": {
     "dotenv": "^16.0.0",
     "eslint": "^8.12.0",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.6.2"
   }
